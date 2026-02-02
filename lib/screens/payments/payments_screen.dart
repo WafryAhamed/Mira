@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_text_styles.dart';
 import '../../constants/app_constants.dart';
+import '../../routes/app_routes.dart';
 
 /// Payments Screen - Bill payments and payees
 class PaymentsScreen extends StatelessWidget {
@@ -164,15 +165,10 @@ class PaymentsScreen extends StatelessWidget {
   }) {
     return GestureDetector(
       onTap: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('$name payment coming soon'),
-            backgroundColor: AppColors.primary,
-            behavior: SnackBarBehavior.floating,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-          ),
+        Navigator.pushNamed(
+          context,
+          AppRoutes.billPaymentForm,
+          arguments: {'type': name, 'icon': iconName},
         );
       },
       child: Container(
@@ -253,15 +249,14 @@ class PaymentsScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.send_rounded, color: AppColors.primary),
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('Send to $name coming soon'),
-                  backgroundColor: AppColors.primary,
-                  behavior: SnackBarBehavior.floating,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
+              Navigator.pushNamed(
+                context,
+                AppRoutes.transferForm,
+                arguments: {
+                  'name': name,
+                  'account': account,
+                  'type': 'same_bank',
+                },
               );
             },
           ),

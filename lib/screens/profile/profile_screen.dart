@@ -89,6 +89,7 @@ class ProfileScreen extends StatelessWidget {
               icon: Icons.person_outline_rounded,
               title: 'Personal Information',
               subtitle: 'View your personal details',
+              onTap: () => Navigator.pushNamed(context, AppRoutes.editProfile),
             ),
             _buildProfileOption(
               context,
@@ -102,24 +103,54 @@ class ProfileScreen extends StatelessWidget {
               icon: Icons.security_outlined,
               title: 'Security',
               subtitle: 'Password and authentication',
+              onTap: () =>
+                  Navigator.pushNamed(context, AppRoutes.securitySettings),
             ),
             _buildProfileOption(
               context,
               icon: Icons.notifications_outlined,
               title: 'Notifications',
               subtitle: 'Manage notification preferences',
+              onTap: () =>
+                  Navigator.pushNamed(context, AppRoutes.notificationSettings),
+            ),
+            _buildProfileOption(
+              context,
+              icon: Icons.color_lens_outlined,
+              title: 'Theme',
+              subtitle: 'Customize app appearance',
+              onTap: () =>
+                  Navigator.pushNamed(context, AppRoutes.themeSettings),
             ),
             _buildProfileOption(
               context,
               icon: Icons.help_outline_rounded,
               title: 'Help & Support',
               subtitle: 'Get help with the app',
+              onTap: () => Navigator.pushNamed(context, AppRoutes.helpSupport),
+            ),
+            _buildProfileOption(
+              context,
+              icon: Icons.description_outlined,
+              title: 'Terms & Conditions',
+              subtitle: 'User agreement and rules',
+              onTap: () =>
+                  Navigator.pushNamed(context, AppRoutes.termsConditions),
+            ),
+            _buildProfileOption(
+              context,
+              icon: Icons.privacy_tip_outlined,
+              title: 'Privacy Policy',
+              subtitle: 'How we handle your data',
+              onTap: () =>
+                  Navigator.pushNamed(context, AppRoutes.privacyPolicy),
             ),
             _buildProfileOption(
               context,
               icon: Icons.info_outline_rounded,
               title: 'About',
               subtitle: 'App version ${AppConstants.appVersion}',
+              onTap: () => Navigator.pushNamed(context, AppRoutes.aboutApp),
             ),
 
             const SizedBox(height: AppConstants.paddingXL),
@@ -231,7 +262,7 @@ class ProfileScreen extends StatelessWidget {
               authProvider.logout();
               Navigator.pushNamedAndRemoveUntil(
                 context,
-                AppRoutes.getStarted,
+                AppRoutes.logoutSuccess,
                 (route) => false,
               );
             },

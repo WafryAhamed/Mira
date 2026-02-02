@@ -5,6 +5,7 @@ import '../../constants/app_text_styles.dart';
 import '../../constants/app_constants.dart';
 import '../../providers/auth_provider.dart';
 import '../../widgets/app_drawer.dart';
+import '../../routes/app_routes.dart';
 
 /// Home Screen - Main dashboard after login
 class HomeScreen extends StatelessWidget {
@@ -56,16 +57,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: const Text('Notifications coming soon'),
-                  backgroundColor: AppColors.primary,
-                  behavior: SnackBarBehavior.floating,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-              );
+              Navigator.pushNamed(context, AppRoutes.notifications);
             },
           ),
           const SizedBox(width: 8),
@@ -200,18 +192,21 @@ class HomeScreen extends StatelessWidget {
                   icon: Icons.send_rounded,
                   label: 'Send Money',
                   color: AppColors.info,
+                  route: AppRoutes.transferOptions,
                 ),
                 _buildQuickAction(
                   context,
                   icon: Icons.receipt_long_rounded,
                   label: 'Pay Bills',
                   color: AppColors.warning,
+                  route: AppRoutes.billPayment,
                 ),
                 _buildQuickAction(
                   context,
                   icon: Icons.qr_code_scanner_rounded,
                   label: 'Scan QR',
                   color: AppColors.success,
+                  route: AppRoutes.qrPayment,
                 ),
               ],
             ),
@@ -280,19 +275,13 @@ class HomeScreen extends StatelessWidget {
     required IconData icon,
     required String label,
     required Color color,
+    String? route,
   }) {
     return GestureDetector(
       onTap: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('$label feature coming soon'),
-            backgroundColor: AppColors.primary,
-            behavior: SnackBarBehavior.floating,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-          ),
-        );
+        if (route != null) {
+          Navigator.pushNamed(context, route);
+        }
       },
       child: Column(
         children: [

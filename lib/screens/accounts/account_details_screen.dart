@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_text_styles.dart';
 import '../../constants/app_constants.dart';
+import '../../routes/app_routes.dart';
 
 /// Account Details Screen - Shows detailed account information
 class AccountDetailsScreen extends StatelessWidget {
@@ -158,6 +159,11 @@ class AccountDetailsScreen extends StatelessWidget {
                     context,
                     icon: Icons.receipt_long_outlined,
                     label: 'Statement',
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      AppRoutes.accountStatements,
+                      arguments: accountId,
+                    ),
                   ),
                 ),
                 const SizedBox(width: AppConstants.paddingM),
@@ -227,20 +233,23 @@ class AccountDetailsScreen extends StatelessWidget {
     BuildContext context, {
     required IconData icon,
     required String label,
+    VoidCallback? onTap,
   }) {
     return GestureDetector(
-      onTap: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('$label feature coming soon'),
-            backgroundColor: AppColors.primary,
-            behavior: SnackBarBehavior.floating,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-          ),
-        );
-      },
+      onTap:
+          onTap ??
+          () {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text('$label feature coming soon'),
+                backgroundColor: AppColors.primary,
+                behavior: SnackBarBehavior.floating,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+            );
+          },
       child: Container(
         padding: const EdgeInsets.symmetric(
           vertical: AppConstants.paddingM,
