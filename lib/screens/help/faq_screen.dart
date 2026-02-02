@@ -28,7 +28,7 @@ class _FaqScreenState extends State<FaqScreen> {
     {
       'question': 'What are the daily transaction limits?',
       'answer':
-          'Daily limits vary by account type:\n• Savings Account: \$5,000/day\n• Current Account: \$10,000/day\nYou can request limit increases through Settings.',
+          'Daily limits vary by account type:\\n\u2022 Savings Account: LKR 500,000/day\\n\u2022 Current Account: LKR 1,000,000/day\\nYou can request limit increases through Settings.',
     },
     {
       'question': 'How do I add a beneficiary?',

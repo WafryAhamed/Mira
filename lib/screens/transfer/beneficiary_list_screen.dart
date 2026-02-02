@@ -8,19 +8,38 @@ import '../../routes/app_routes.dart';
 class BeneficiaryListScreen extends StatelessWidget {
   const BeneficiaryListScreen({super.key});
 
+  // Multi-religion beneficiaries (Buddhist, Muslim, Hindu)
   static const List<Map<String, String>> _beneficiaries = [
-    {'name': 'Nimal Fernando', 'account': '1234567890', 'bank': 'Mira Bank'},
-    {'name': 'Saman Jayasinghe', 'account': '0987654321', 'bank': 'Mira Bank'},
     {
-      'name': 'Chamari Wickramasinghe',
+      'name': 'Nimal Fernando',
+      'account': '1234567890',
+      'bank': 'Mira Bank',
+    }, // Buddhist/Sinhala
+    {
+      'name': 'Mohamed Ahamed Rizwan',
+      'account': '0987654321',
+      'bank': 'Mira Bank',
+    }, // Muslim
+    {
+      'name': 'Suresh Kumar',
       'account': '5678901234',
       'bank': 'People\'s Bank',
-    },
+    }, // Hindu/Tamil
     {
-      'name': 'Tharindu Silva',
+      'name': 'Fathima Nazeera',
       'account': '4321098765',
       'bank': 'Commercial Bank',
-    },
+    }, // Muslim
+    {
+      'name': 'Tharindu Silva',
+      'account': '1122334455',
+      'bank': 'Bank of Ceylon',
+    }, // Buddhist/Sinhala
+    {
+      'name': 'Priya Subramaniam',
+      'account': '6677889900',
+      'bank': 'People\'s Bank',
+    }, // Hindu/Tamil
   ];
 
   @override

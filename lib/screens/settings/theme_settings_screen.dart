@@ -134,7 +134,7 @@ class _ThemeSettingsScreenState extends State<ThemeSettingsScreen> {
                   ),
                   const SizedBox(height: AppConstants.paddingL),
                   Text(
-                    '\$18,568.00',
+                    'LKR 2,456,800.00',
                     style: AppTextStyles.h2.copyWith(
                       color: AppColors.textOnPrimary,
                     ),

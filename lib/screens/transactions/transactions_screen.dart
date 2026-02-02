@@ -216,7 +216,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  '${isCredit ? '+' : '-'}\$${amount.toStringAsFixed(2)}',
+                  '${isCredit ? '+' : '-'}LKR ${amount.toStringAsFixed(2)}',
                   style: AppTextStyles.labelLarge.copyWith(
                     color: isCredit ? AppColors.success : AppColors.error,
                   ),

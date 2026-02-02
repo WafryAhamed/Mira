@@ -108,7 +108,7 @@ class _TransferFailureScreenState extends State<TransferFailureScreen>
 
               // Amount
               Text(
-                '\$$amount',
+                'LKR $amount',
                 style: AppTextStyles.h1.copyWith(
                   color: AppColors.error,
                   fontSize: 42,

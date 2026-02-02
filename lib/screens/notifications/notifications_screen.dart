@@ -12,7 +12,7 @@ class NotificationsScreen extends StatelessWidget {
     {
       'type': 'transaction',
       'title': 'Payment Received',
-      'message': 'You received LKR 25,000.00 from Nimal Fernando',
+      'message': 'You received LKR 25,000.00 from Fathima Nazeera', // Muslim
       'time': '2 min ago',
       'isRead': false,
     },
@@ -47,7 +47,7 @@ class NotificationsScreen extends StatelessWidget {
     {
       'type': 'transaction',
       'title': 'Transfer Completed',
-      'message': 'Transferred LKR 50,000.00 to Saman Jayasinghe',
+      'message': 'Transferred LKR 50,000.00 to Suresh Kumar', // Hindu/Tamil
       'time': '3 days ago',
       'isRead': true,
     },

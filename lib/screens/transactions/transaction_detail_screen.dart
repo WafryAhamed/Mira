@@ -82,7 +82,7 @@ class TransactionDetailScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: AppConstants.paddingS),
                   Text(
-                    '${isCredit ? '+' : '-'}\$${amount.toStringAsFixed(2)}',
+                    '${isCredit ? '+' : '-'}LKR ${amount.toStringAsFixed(2)}',
                     style: AppTextStyles.h1.copyWith(
                       color: Colors.white,
                       fontSize: 40,
