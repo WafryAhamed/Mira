@@ -12,7 +12,7 @@ class NotificationsScreen extends StatelessWidget {
     {
       'type': 'transaction',
       'title': 'Payment Received',
-      'message': 'You received \$250.00 from Jane Smith',
+      'message': 'You received LKR 25,000.00 from Nimal Fernando',
       'time': '2 min ago',
       'isRead': false,
     },
@@ -26,7 +26,7 @@ class NotificationsScreen extends StatelessWidget {
     {
       'type': 'transaction',
       'title': 'Bill Payment Successful',
-      'message': 'Electricity bill of \$89.00 paid',
+      'message': 'CEB electricity bill of LKR 6,200.00 paid',
       'time': '3 hours ago',
       'isRead': true,
     },
@@ -47,7 +47,7 @@ class NotificationsScreen extends StatelessWidget {
     {
       'type': 'transaction',
       'title': 'Transfer Completed',
-      'message': 'Transferred \$500.00 to Mike Johnson',
+      'message': 'Transferred LKR 50,000.00 to Saman Jayasinghe',
       'time': '3 days ago',
       'isRead': true,
     },

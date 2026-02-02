@@ -24,7 +24,12 @@ class _BillPaymentFormScreenState extends State<BillPaymentFormScreen> {
     super.initState();
     _billNoController.text = widget.args?['billNo'] ?? '';
     final amount =
-        widget.args?['amount']?.toString().replaceAll('\$', '') ?? '';
+        widget.args?['amount']
+            ?.toString()
+            .replaceAll('LKR', '')
+            .replaceAll('\$', '')
+            .trim() ??
+        '';
     _amountController.text = amount;
   }
 
@@ -151,7 +156,7 @@ class _BillPaymentFormScreenState extends State<BillPaymentFormScreen> {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: '0.00',
-                  prefixText: '\$ ',
+                  prefixText: 'LKR ',
                   filled: true,
                   fillColor: AppColors.accent,
                   border: OutlineInputBorder(
@@ -210,7 +215,7 @@ class _BillPaymentFormScreenState extends State<BillPaymentFormScreen> {
                             style: AppTextStyles.labelLarge,
                           ),
                           Text(
-                            'Balance: \$18,568.00',
+                            'Balance: LKR 2,456,800.00',
                             style: AppTextStyles.caption,
                           ),
                         ],

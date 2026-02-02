@@ -72,7 +72,7 @@ class BillPaymentConfirmationScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: AppConstants.paddingS),
                   Text(
-                    '\$$amount',
+                    'LKR $amount',
                     style: AppTextStyles.h1.copyWith(
                       color: AppColors.textOnPrimary,
                       fontSize: 42,
@@ -86,9 +86,9 @@ class BillPaymentConfirmationScreen extends StatelessWidget {
             // Payment Details
             _buildDetailRow('Bill Type', billType),
             _buildDetailRow('Bill Number', billNo),
-            _buildDetailRow('Amount', '\$$amount'),
+            _buildDetailRow('Amount', 'LKR $amount'),
             _buildDetailRow('From Account', 'Savings •••• 7890'),
-            _buildDetailRow('Payment Fee', '\$0.00'),
+            _buildDetailRow('Payment Fee', 'LKR 0.00'),
 
             const SizedBox(height: AppConstants.paddingXL),
 
@@ -106,7 +106,7 @@ class BillPaymentConfirmationScreen extends StatelessWidget {
                 children: [
                   Text('Total Amount', style: AppTextStyles.labelLarge),
                   Text(
-                    '\$$amount',
+                    'LKR $amount',
                     style: AppTextStyles.h4.copyWith(color: AppColors.primary),
                   ),
                 ],

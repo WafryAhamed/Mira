@@ -38,7 +38,7 @@ class _FaqScreenState extends State<FaqScreen> {
     {
       'question': 'Is my money safe with Mira Bank?',
       'answer':
-          'Yes! We use bank-grade encryption, two-factor authentication, and real-time fraud monitoring. Your deposits are also insured up to \$250,000.',
+          'Yes! We use bank-grade encryption, two-factor authentication, and real-time fraud monitoring. Your deposits are protected according to Sri Lankan banking regulations.',
     },
     {
       'question': 'How do I enable biometric login?',

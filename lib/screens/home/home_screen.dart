@@ -163,7 +163,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: AppConstants.paddingS),
                   Text(
-                    '\$24,568.00',
+                    'LKR 2,456,800.00',
                     style: AppTextStyles.h1.copyWith(
                       color: AppColors.textOnPrimary,
                       fontSize: 36,
@@ -345,7 +345,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                '${isCredit ? '+' : '-'}\$${amount.toStringAsFixed(2)}',
+                '${isCredit ? '+' : '-'}LKR ${amount.toStringAsFixed(2)}',
                 style: AppTextStyles.labelLarge.copyWith(
                   color: isCredit ? AppColors.success : AppColors.error,
                 ),

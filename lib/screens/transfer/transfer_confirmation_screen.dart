@@ -58,7 +58,7 @@ class TransferConfirmationScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: AppConstants.paddingS),
                   Text(
-                    '\$$amount',
+                    'LKR $amount',
                     style: AppTextStyles.h1.copyWith(
                       color: AppColors.textOnPrimary,
                       fontSize: 42,
@@ -77,7 +77,7 @@ class TransferConfirmationScreen extends StatelessWidget {
             ),
             if (!isOwnAccount)
               _buildDetailRow('Bank', args?['bank'] ?? 'Mira Bank'),
-            _buildDetailRow('Transfer Fee', '\$0.00'),
+            _buildDetailRow('Transfer Fee', 'LKR 0.00'),
             if (remark.isNotEmpty) _buildDetailRow('Remark', remark),
 
             const SizedBox(height: AppConstants.paddingXL),

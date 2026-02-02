@@ -45,7 +45,7 @@ class User {
   /// Demo user for testing
   static User get demoUser => User(
     id: 'demo-001',
-    fullName: 'John Doe',
+    fullName: 'Kasun Perera',
     email: 'demo@mira.com',
     phone: '0771234567',
     nic: '200012345678',

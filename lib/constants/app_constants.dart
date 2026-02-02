@@ -66,15 +66,15 @@ class MockData {
   static const String demoOtp = '123456';
 
   // Demo user
-  static const String demoUserName = 'John Doe';
-  static const String demoUserPhone = '0771234567';
-  static const String demoUserNic = '200012345678';
+  static const String demoUserName = 'Kasun Perera';
+  static const String demoUserPhone = '+94 77 123 4567';
+  static const String demoUserNic = '199812345678';
 
   // Onboarding content
   static const List<Map<String, String>> onboardingData = [
     {
       'title': 'Digital Banking',
-      'subtitle': 'Experience the future of banking',
+      'subtitle': 'Your trusted digital bank in Sri Lanka',
       'description':
           'Manage your finances anytime, anywhere with our secure and intuitive mobile banking platform.',
     },
@@ -82,13 +82,13 @@ class MockData {
       'title': 'Secure Transactions',
       'subtitle': 'Your money is safe with us',
       'description':
-          'Bank-grade security with biometric authentication and real-time fraud protection for all your transactions.',
+          'Bank-grade security with biometric authentication and real-time fraud protection for Sri Lankan customers.',
     },
     {
       'title': 'Easy Transfers',
-      'subtitle': 'Send money in seconds',
+      'subtitle': 'Send money across Sri Lanka instantly',
       'description':
-          'Transfer funds instantly to anyone, pay bills effortlessly, and manage all your payments in one place.',
+          'Transfer funds instantly to anyone in Sri Lanka, pay bills effortlessly, and manage all your payments in one place.',
     },
   ];
 
@@ -96,36 +96,36 @@ class MockData {
   static const List<Map<String, dynamic>> transactionHistory = [
     {
       'id': 'TXN001',
-      'title': 'Salary Deposit',
-      'description': 'Monthly Salary',
-      'amount': 5000.00,
+      'title': 'Salary Credit',
+      'description': 'Salary - Mira Bank',
+      'amount': 125000.00,
       'isCredit': true,
       'date': '2026-02-01',
       'category': 'income',
     },
     {
       'id': 'TXN002',
-      'title': 'Amazon Shopping',
-      'description': 'Electronics Purchase',
-      'amount': 125.00,
+      'title': 'Keells Super',
+      'description': 'Shopping Payment',
+      'amount': 8500.00,
       'isCredit': false,
       'date': '2026-01-30',
       'category': 'shopping',
     },
     {
       'id': 'TXN003',
-      'title': 'Electricity Bill',
+      'title': 'CEB Electricity Bill',
       'description': 'Ceylon Electricity Board',
-      'amount': 89.00,
+      'amount': 6200.00,
       'isCredit': false,
       'date': '2026-01-28',
       'category': 'utilities',
     },
     {
       'id': 'TXN004',
-      'title': 'Restaurant',
-      'description': 'Food & Dining',
-      'amount': 45.00,
+      'title': 'Ministry of Crab',
+      'description': 'Restaurant Payment',
+      'amount': 12500.00,
       'isCredit': false,
       'date': '2026-01-27',
       'category': 'food',
@@ -133,26 +133,26 @@ class MockData {
     {
       'id': 'TXN005',
       'title': 'Transfer Received',
-      'description': 'From Jane Smith',
-      'amount': 250.00,
+      'description': 'From Mohamed Ahamed Rizwan',
+      'amount': 25000.00,
       'isCredit': true,
       'date': '2026-01-25',
       'category': 'transfer',
     },
     {
       'id': 'TXN006',
-      'title': 'Netflix Subscription',
-      'description': 'Monthly Subscription',
-      'amount': 15.99,
+      'title': 'Dialog Mobile Reload',
+      'description': 'Mobile Top-up',
+      'amount': 1500.00,
       'isCredit': false,
       'date': '2026-01-24',
       'category': 'entertainment',
     },
     {
       'id': 'TXN007',
-      'title': 'Grocery Store',
-      'description': 'Weekly Groceries',
-      'amount': 78.50,
+      'title': 'Cargills Food City',
+      'description': 'Grocery Shopping',
+      'amount': 5800.00,
       'isCredit': false,
       'date': '2026-01-22',
       'category': 'shopping',
@@ -161,7 +161,7 @@ class MockData {
       'id': 'TXN008',
       'title': 'Water Bill',
       'description': 'National Water Board',
-      'amount': 32.00,
+      'amount': 2200.00,
       'isCredit': false,
       'date': '2026-01-20',
       'category': 'utilities',
@@ -175,8 +175,8 @@ class MockData {
       'type': 'Savings Account',
       'accountNumber': '1234567890',
       'maskedNumber': '•••• •••• •••• 7890',
-      'balance': 18568.00,
-      'currency': 'USD',
+      'balance': 2456800.00,
+      'currency': 'LKR',
       'branch': 'Colombo Main Branch',
       'status': 'Active',
       'openDate': '2024-01-15',
@@ -186,9 +186,9 @@ class MockData {
       'type': 'Current Account',
       'accountNumber': '0987654321',
       'maskedNumber': '•••• •••• •••• 4321',
-      'balance': 6000.00,
-      'currency': 'USD',
-      'branch': 'Colombo City Branch',
+      'balance': 850000.00,
+      'currency': 'LKR',
+      'branch': 'Kandy Branch',
       'status': 'Active',
       'openDate': '2024-03-20',
     },
@@ -204,10 +204,12 @@ class MockData {
     {'id': 'PAY006', 'name': 'Education', 'icon': 'school'},
   ];
 
-  // Recent payees
+  // Recent payees (Multi-religion representation)
   static const List<Map<String, String>> recentPayees = [
-    {'name': 'Jane Smith', 'account': '•••• 5678'},
-    {'name': 'Mike Johnson', 'account': '•••• 9012'},
-    {'name': 'Sarah Wilson', 'account': '•••• 3456'},
+    {'name': 'Nimal Fernando', 'account': '•••• 5678'}, // Buddhist/Sinhala
+    {'name': 'Mohamed Ahamed Rizwan', 'account': '•••• 9012'}, // Muslim
+    {'name': 'Suresh Kumar', 'account': '•••• 3456'}, // Hindu/Tamil
+    {'name': 'Fathima Nazeera', 'account': '•••• 7891'}, // Muslim
+    {'name': 'Priya Subramaniam', 'account': '•••• 2345'}, // Hindu/Tamil
   ];
 }

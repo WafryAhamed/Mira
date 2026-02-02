@@ -253,7 +253,7 @@ class _QrPaymentScreenState extends State<QrPaymentScreen>
                 const SizedBox(height: AppConstants.paddingL),
 
                 // User Info
-                Text('John Doe', style: AppTextStyles.h4),
+                Text('Kasun Perera', style: AppTextStyles.h4),
                 const SizedBox(height: AppConstants.paddingXS),
                 Text(
                   'Savings Account',

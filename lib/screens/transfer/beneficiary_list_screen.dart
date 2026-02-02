@@ -9,10 +9,18 @@ class BeneficiaryListScreen extends StatelessWidget {
   const BeneficiaryListScreen({super.key});
 
   static const List<Map<String, String>> _beneficiaries = [
-    {'name': 'Jane Smith', 'account': '1234567890', 'bank': 'Mira Bank'},
-    {'name': 'Mike Johnson', 'account': '0987654321', 'bank': 'Mira Bank'},
-    {'name': 'Sarah Wilson', 'account': '5678901234', 'bank': 'National Bank'},
-    {'name': 'David Brown', 'account': '4321098765', 'bank': 'City Bank'},
+    {'name': 'Nimal Fernando', 'account': '1234567890', 'bank': 'Mira Bank'},
+    {'name': 'Saman Jayasinghe', 'account': '0987654321', 'bank': 'Mira Bank'},
+    {
+      'name': 'Chamari Wickramasinghe',
+      'account': '5678901234',
+      'bank': 'People\'s Bank',
+    },
+    {
+      'name': 'Tharindu Silva',
+      'account': '4321098765',
+      'bank': 'Commercial Bank',
+    },
   ];
 
   @override

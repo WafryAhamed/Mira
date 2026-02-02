@@ -73,14 +73,14 @@ class TransferOptionsScreen extends StatelessWidget {
             Text('Recent Transfers', style: AppTextStyles.h5),
             const SizedBox(height: AppConstants.paddingM),
             _buildRecentTransfer(
-              name: 'Jane Smith',
+              name: 'Nimal Fernando',
               account: '•••• 5678',
-              amount: '\$250.00',
+              amount: 'LKR 25,000',
             ),
             _buildRecentTransfer(
-              name: 'Mike Johnson',
+              name: 'Saman Jayasinghe',
               account: '•••• 9012',
-              amount: '\$150.00',
+              amount: 'LKR 15,000',
             ),
           ],
         ),

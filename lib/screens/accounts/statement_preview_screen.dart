@@ -178,17 +178,17 @@ class StatementPreviewScreen extends StatelessWidget {
                   const SizedBox(height: AppConstants.paddingM),
                   _buildSummaryRow('Account Number', '•••• •••• •••• 7890'),
                   _buildSummaryRow('Account Type', 'Savings Account'),
-                  _buildSummaryRow('Opening Balance', '\$22,450.00'),
-                  _buildSummaryRow('Closing Balance', '\$24,568.00'),
+                  _buildSummaryRow('Opening Balance', 'LKR 2,240,000.00'),
+                  _buildSummaryRow('Closing Balance', 'LKR 2,456,800.00'),
                   const Divider(height: 24),
                   _buildSummaryRow(
                     'Total Credits',
-                    '\$5,200.00',
+                    'LKR 320,000.00',
                     isPositive: true,
                   ),
                   _buildSummaryRow(
                     'Total Debits',
-                    '\$3,082.00',
+                    'LKR 103,200.00',
                     isNegative: true,
                   ),
                 ],
@@ -291,7 +291,7 @@ class StatementPreviewScreen extends StatelessWidget {
           Expanded(
             flex: 2,
             child: Text(
-              '${isCredit ? '+' : '-'}\$${txn['amount']}',
+              '${isCredit ? '+' : '-'}LKR ${txn['amount']}',
               style: AppTextStyles.labelMedium.copyWith(
                 color: isCredit ? AppColors.success : AppColors.error,
               ),

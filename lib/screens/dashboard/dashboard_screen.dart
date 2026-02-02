@@ -149,7 +149,7 @@ class DashboardScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: AppConstants.paddingS),
                     Text(
-                      '\$24,568.00',
+                      'LKR 2,456,800.00',
                       style: AppTextStyles.h1.copyWith(
                         color: AppColors.textOnPrimary,
                         fontSize: 36,
@@ -249,29 +249,29 @@ class DashboardScreen extends StatelessWidget {
               _buildTransactionItem(
                 icon: Icons.shopping_bag_outlined,
                 title: 'Shopping',
-                subtitle: 'Amazon',
-                amount: '-\$125.00',
+                subtitle: 'Keells Super',
+                amount: '-LKR 8,500.00',
                 isExpense: true,
               ),
               _buildTransactionItem(
                 icon: Icons.attach_money_rounded,
                 title: 'Salary',
-                subtitle: 'Monthly Deposit',
-                amount: '+\$5,000.00',
+                subtitle: 'Salary - Mira Bank',
+                amount: '+LKR 125,000.00',
                 isExpense: false,
               ),
               _buildTransactionItem(
                 icon: Icons.restaurant_outlined,
                 title: 'Food & Dining',
-                subtitle: 'Restaurant',
-                amount: '-\$45.00',
+                subtitle: 'Ministry of Crab',
+                amount: '-LKR 12,500.00',
                 isExpense: true,
               ),
               _buildTransactionItem(
                 icon: Icons.bolt_outlined,
                 title: 'Utilities',
-                subtitle: 'Electricity Bill',
-                amount: '-\$89.00',
+                subtitle: 'CEB Electricity Bill',
+                amount: '-LKR 6,200.00',
                 isExpense: true,
               ),
 

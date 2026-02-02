@@ -96,7 +96,7 @@ class _TransferFormScreenState extends State<TransferFormScreen> {
                             style: AppTextStyles.labelLarge,
                           ),
                           Text(
-                            'Balance: \$18,568.00',
+                            'Balance: LKR 2,456,800.00',
                             style: AppTextStyles.caption,
                           ),
                         ],
@@ -180,7 +180,7 @@ class _TransferFormScreenState extends State<TransferFormScreen> {
                 style: AppTextStyles.h3,
                 decoration: InputDecoration(
                   hintText: '0.00',
-                  prefixText: '\$ ',
+                  prefixText: 'LKR ',
                   prefixStyle: AppTextStyles.h3.copyWith(
                     color: AppColors.textLight,
                   ),
@@ -206,7 +206,7 @@ class _TransferFormScreenState extends State<TransferFormScreen> {
                   if (amount == null || amount <= 0) {
                     return 'Please enter a valid amount';
                   }
-                  if (amount > 18568) {
+                  if (amount > 2456800) {
                     return 'Insufficient balance';
                   }
                   return null;
@@ -238,10 +238,10 @@ class _TransferFormScreenState extends State<TransferFormScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _buildQuickAmountButton('\$100'),
-                  _buildQuickAmountButton('\$250'),
-                  _buildQuickAmountButton('\$500'),
-                  _buildQuickAmountButton('\$1000'),
+                  _buildQuickAmountButton('10000'),
+                  _buildQuickAmountButton('25000'),
+                  _buildQuickAmountButton('50000'),
+                  _buildQuickAmountButton('100000'),
                 ],
               ),
             ],
@@ -275,7 +275,7 @@ class _TransferFormScreenState extends State<TransferFormScreen> {
   Widget _buildQuickAmountButton(String amount) {
     return GestureDetector(
       onTap: () {
-        _amountController.text = amount.replaceAll('\$', '');
+        _amountController.text = amount;
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
