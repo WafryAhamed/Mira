@@ -91,4 +91,123 @@ class MockData {
           'Transfer funds instantly to anyone, pay bills effortlessly, and manage all your payments in one place.',
     },
   ];
+
+  // Mock transaction data
+  static const List<Map<String, dynamic>> transactionHistory = [
+    {
+      'id': 'TXN001',
+      'title': 'Salary Deposit',
+      'description': 'Monthly Salary',
+      'amount': 5000.00,
+      'isCredit': true,
+      'date': '2026-02-01',
+      'category': 'income',
+    },
+    {
+      'id': 'TXN002',
+      'title': 'Amazon Shopping',
+      'description': 'Electronics Purchase',
+      'amount': 125.00,
+      'isCredit': false,
+      'date': '2026-01-30',
+      'category': 'shopping',
+    },
+    {
+      'id': 'TXN003',
+      'title': 'Electricity Bill',
+      'description': 'Ceylon Electricity Board',
+      'amount': 89.00,
+      'isCredit': false,
+      'date': '2026-01-28',
+      'category': 'utilities',
+    },
+    {
+      'id': 'TXN004',
+      'title': 'Restaurant',
+      'description': 'Food & Dining',
+      'amount': 45.00,
+      'isCredit': false,
+      'date': '2026-01-27',
+      'category': 'food',
+    },
+    {
+      'id': 'TXN005',
+      'title': 'Transfer Received',
+      'description': 'From Jane Smith',
+      'amount': 250.00,
+      'isCredit': true,
+      'date': '2026-01-25',
+      'category': 'transfer',
+    },
+    {
+      'id': 'TXN006',
+      'title': 'Netflix Subscription',
+      'description': 'Monthly Subscription',
+      'amount': 15.99,
+      'isCredit': false,
+      'date': '2026-01-24',
+      'category': 'entertainment',
+    },
+    {
+      'id': 'TXN007',
+      'title': 'Grocery Store',
+      'description': 'Weekly Groceries',
+      'amount': 78.50,
+      'isCredit': false,
+      'date': '2026-01-22',
+      'category': 'shopping',
+    },
+    {
+      'id': 'TXN008',
+      'title': 'Water Bill',
+      'description': 'National Water Board',
+      'amount': 32.00,
+      'isCredit': false,
+      'date': '2026-01-20',
+      'category': 'utilities',
+    },
+  ];
+
+  // Mock account data
+  static const List<Map<String, dynamic>> accountList = [
+    {
+      'id': 'ACC001',
+      'type': 'Savings Account',
+      'accountNumber': '1234567890',
+      'maskedNumber': '•••• •••• •••• 7890',
+      'balance': 18568.00,
+      'currency': 'USD',
+      'branch': 'Colombo Main Branch',
+      'status': 'Active',
+      'openDate': '2024-01-15',
+    },
+    {
+      'id': 'ACC002',
+      'type': 'Current Account',
+      'accountNumber': '0987654321',
+      'maskedNumber': '•••• •••• •••• 4321',
+      'balance': 6000.00,
+      'currency': 'USD',
+      'branch': 'Colombo City Branch',
+      'status': 'Active',
+      'openDate': '2024-03-20',
+    },
+  ];
+
+  // Payment categories
+  static const List<Map<String, dynamic>> paymentCategories = [
+    {'id': 'PAY001', 'name': 'Electricity', 'icon': 'bolt'},
+    {'id': 'PAY002', 'name': 'Water', 'icon': 'water_drop'},
+    {'id': 'PAY003', 'name': 'Internet', 'icon': 'wifi'},
+    {'id': 'PAY004', 'name': 'Phone', 'icon': 'phone_android'},
+    {'id': 'PAY005', 'name': 'Insurance', 'icon': 'security'},
+    {'id': 'PAY006', 'name': 'Education', 'icon': 'school'},
+  ];
+
+  // Recent payees
+  static const List<Map<String, String>> recentPayees = [
+    {'name': 'Jane Smith', 'account': '•••• 5678'},
+    {'name': 'Mike Johnson', 'account': '•••• 9012'},
+    {'name': 'Sarah Wilson', 'account': '•••• 3456'},
+  ];
 }

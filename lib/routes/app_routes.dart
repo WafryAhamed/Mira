@@ -6,7 +6,9 @@ import '../screens/auth/login_screen.dart';
 import '../screens/auth/register_screen.dart';
 import '../screens/auth/otp_screen.dart';
 import '../screens/auth/email_verification_screen.dart';
-import '../screens/dashboard/dashboard_screen.dart';
+import '../screens/main/main_navigation.dart';
+import '../screens/accounts/account_list_screen.dart';
+import '../screens/accounts/account_details_screen.dart';
 
 /// App route names
 class AppRoutes {
@@ -20,6 +22,9 @@ class AppRoutes {
   static const String otp = '/otp';
   static const String emailVerification = '/email-verification';
   static const String dashboard = '/dashboard';
+  static const String main = '/main';
+  static const String accountList = '/account-list';
+  static const String accountDetails = '/account-details';
 
   /// Generate routes
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -39,7 +44,18 @@ class AppRoutes {
       case emailVerification:
         return _buildRoute(const EmailVerificationScreen(), settings);
       case dashboard:
-        return _buildRoute(const DashboardScreen(), settings);
+        // Dashboard now routes to main navigation
+        return _buildRoute(const MainNavigation(), settings);
+      case main:
+        return _buildRoute(const MainNavigation(), settings);
+      case accountList:
+        return _buildRoute(const AccountListScreen(), settings);
+      case accountDetails:
+        final accountId = settings.arguments as String? ?? 'ACC001';
+        return _buildRoute(
+          AccountDetailsScreen(accountId: accountId),
+          settings,
+        );
       default:
         return _buildRoute(const SplashScreen(), settings);
     }
